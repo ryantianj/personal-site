@@ -1,0 +1,10 @@
+.aboutWrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    max-width: var(--maxWidth);
+    min-width: var(--minWidth);
+    height: 100vh;
+    max-height: var(--maxHeight);
+    min-height: var(--minHeight);
+}
