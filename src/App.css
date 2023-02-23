@@ -1,7 +1,7 @@
 :root {
     --primaryColour: #ddff8f;
     --maxWidth: 1400px;
-    --minWidth: 1000px;
+    --minWidth: 768px;
     --maxHeight: 1000px;
     --minHeight: 500px;
     --headerFontSize: 60px;

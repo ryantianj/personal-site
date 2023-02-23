@@ -10,7 +10,7 @@ const Main = () => {
             {/*<NavBar />*/}
             <div className="appWrapper">
                 <Hello />
-                <About />
+                {/*<About />*/}
             </div>
         </React.Fragment>
     )

@@ -1,6 +1,4 @@
 .aboutmeWrapper {
-    grid-column-start: 1;
-    grid-column-end: 2;
     background-color: var(--primaryColour);
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;

@@ -1,10 +1,11 @@
 .aboutWrapper {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
     width: 100%;
     max-width: var(--maxWidth);
     min-width: var(--minWidth);
     height: 100vh;
     max-height: var(--maxHeight);
     min-height: var(--minHeight);
+    margin-left: auto;
+    margin-right: auto;
 }
