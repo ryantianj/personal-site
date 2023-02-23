@@ -13,7 +13,7 @@ const Skills = ({skills}) => {
 
     return (
         <div className="skillsWrapper">
-            {skills.map(x => <Skill skill={x}/>)}
+            {skills.map((x, i) => <Skill skill={x} key={i}/>)}
         </div>
     )
 }

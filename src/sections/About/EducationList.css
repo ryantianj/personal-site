@@ -1,0 +1,24 @@
+.educationListWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.educationListItem {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 100%;
+}
+
+.educationListDate {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-weight: bold;
+}
+
+.educationListInfoWrapper {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}

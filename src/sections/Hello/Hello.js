@@ -6,7 +6,7 @@ import {IntroInfo, portraitInfo} from "../../Information/Hello";
 
 const Hello = () => {
     return (
-        <div className="componentWrapper">
+        <div className="helloWrapper">
             <Portrait profilePicture={portraitInfo.photo}/>
             <Intro greeting={IntroInfo.greeting} name={IntroInfo.name} title={IntroInfo.title}/>
         </div>
