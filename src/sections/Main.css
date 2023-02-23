@@ -1,7 +1,5 @@
 .appWrapper {
     background-color: white;
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
 }
 
 .helloWrapper {
@@ -9,7 +7,6 @@
     flex-wrap: wrap;
     width: 100%;
     max-width: var(--maxWidth);
-    /*min-width: var(--minWidth);*/
     height: 100vh;
     max-height: var(--maxHeight);
     min-height: var(--minHeight);
@@ -22,7 +19,6 @@
     flex-wrap: wrap;
     width: 100%;
     max-width: var(--maxWidth);
-    /*min-width: var(--minWidth);*/
     height: 100%;
     max-height: var(--maxHeight);
     min-height: var(--minHeight);
@@ -30,9 +26,17 @@
     margin-right: auto;
 }
 
+.sectionHeader {
+    width: 100%;
+    font-size: var(--headerFontSize);
+    text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
     .componentWrapper {
-        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: none;
     }
 }
 

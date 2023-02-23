@@ -1,0 +1,50 @@
+.projectItem {
+    height: 280px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.projectItem:hover {
+    cursor: pointer;
+}
+
+.projectItemImage {
+    background-color: var(--greyAccent);
+    border-radius: 20px;
+    height: 225px;
+    width: 400px;
+}
+
+
+.projectTitle{
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.projectItemInfo {
+    background-color: var(--primaryColour);
+    border-radius: 20px;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    overflow-y: scroll;
+}
+
+.projectItemShowMore {
+    background-color: var(--primaryColour);
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.projectItemShowMore:hover {
+    cursor: help;
+}

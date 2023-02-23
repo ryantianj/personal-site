@@ -1,0 +1,10 @@
+.projectWrapper {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    column-gap: 20px;
+}

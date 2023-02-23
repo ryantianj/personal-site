@@ -1,5 +1,5 @@
 :root {
-    --primaryColour: #ddff8f;
+    --primaryColour: #66B2FF;
     --maxWidth: 1900px;
     --minWidth: 768px;
     --maxHeight: 1200px;
@@ -7,4 +7,8 @@
     --headerFontSize: 60px;
     --greyAccent : #c7d0d8;
     /*access using var(--name)*/
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

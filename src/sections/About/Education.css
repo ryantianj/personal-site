@@ -1,17 +1,16 @@
 .educationWrapper {
     flex:50%;
     height: 100%;
+    padding: 60px;
     box-sizing: border-box;
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     -ms-box-sizing:border-box;
-    padding: 60px;
 }
 
 @media only screen and (max-width: 768px) {
     .educationWrapper {
         flex:100%;
-        min-width: 20px;
         padding: 20px;
     }
 }

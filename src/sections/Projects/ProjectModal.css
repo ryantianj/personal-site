@@ -1,0 +1,40 @@
+.projectModalWrapper {
+    background-color: var(--primaryColour);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.projectModalImage {
+    background-color: var(--greyAccent);
+    border-radius: 20px;
+    height: 225px;
+    width: 400px;
+}
+
+.projectModalBody {
+    max-height: 70vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.projectModalButton {
+    background-color: var(--primaryColour);
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .projectModalImage {
+        background-color: var(--greyAccent);
+        border-radius: 20px;
+        height: 113px;
+        width: 200px;
+    }
+}
