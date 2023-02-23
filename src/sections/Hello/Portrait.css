@@ -1,9 +1,17 @@
 .portraitWrapper {
-    width: 50%;
+    flex:50%;
+    width: 100%;
     height: 100%;
     max-width: var(calc(--maxWidth / 2));
     min-width: var(calc(--minWidth / 2));
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .portraitWrapper {
+        flex:100%;
+        min-width: 20px;
+    }
 }

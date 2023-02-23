@@ -1,9 +1,10 @@
 .aboutWrapper {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     max-width: var(--maxWidth);
-    min-width: var(--minWidth);
-    height: 100vh;
+    /*min-width: var(--minWidth);*/
+    height: 100%;
     max-height: var(--maxHeight);
     min-height: var(--minHeight);
     margin-left: auto;
