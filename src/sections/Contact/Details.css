@@ -1,0 +1,12 @@
+.detailsWrapper {
+ padding: 50px;
+}
+
+.detailWrapper {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: flex-start;
+ gap: 20px;
+ width: 100%;
+}

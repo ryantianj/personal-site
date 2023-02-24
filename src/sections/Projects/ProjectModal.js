@@ -1,14 +1,13 @@
-import React, {useContext} from "react";
+import React from "react";
 import "./ProjectModal.css"
-import ModalContext from "../../components/ModalContext";
 import Skills from "../About/Skills";
 
-const ProjectModal = ({data}) => {
-    const modalContext = useContext(ModalContext)
+const ProjectModal = ({data, setIsShowMore}) => {
 
     const handleClick = () => {
-        modalContext.setIsOpen(false)
-        modalContext.setData({})
+        // can stop propagation here to not flip project back after modal close
+      setIsShowMore(false)
+        document.body.style.overflow = 'unset';
     }
 
 

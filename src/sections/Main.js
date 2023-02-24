@@ -4,6 +4,8 @@ import NavBar from "../components/navbar/navbar"
 import Hello from "./Hello/Hello";
 import About from "./About/About"
 import Projects from "./Projects/Projects";
+import Certs from "./Certs/Certs";
+import Contact from "./Contact/Contact";
 
 const Main = () => {
     return (
@@ -13,6 +15,8 @@ const Main = () => {
                 <Hello />
                 <About />
                 <Projects />
+                <Certs />
+                <Contact/>
             </div>
         </React.Fragment>
     )

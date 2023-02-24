@@ -1,0 +1,9 @@
+.callWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    width: 100%;
+}

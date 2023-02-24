@@ -20,7 +20,7 @@
     width: 100%;
     max-width: var(--maxWidth);
     height: 100%;
-    max-height: var(--maxHeight);
+    /*max-height: var(--maxHeight);*/
     min-height: var(--minHeight);
     margin-left: auto;
     margin-right: auto;

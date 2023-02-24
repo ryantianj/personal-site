@@ -1,19 +1,20 @@
-import React, {useContext, useState} from "react";
+import React, {useState} from "react";
 import backUp from "../../Information/logo192.png";
 import Skills from "../About/Skills";
 import "./Project.css"
-import ModalContext from "../../components/ModalContext";
+import ProjectModal from "./ProjectModal";
+import Modal from "../../components/Modal";
 
 const Project = ({project}) => {
     const [clicked, setClicked] = useState(true)
-    const projectContext = useContext(ModalContext)
+    const [isShowMore, setIsShowMore] = useState(false)
 
-    const handleShowMore = (e, project) => {
+    const handleShowMore = (e) => {
         if (e.stopPropagation) {
             e.stopPropagation();
         }
-        projectContext.setData(project)
-        projectContext.setIsOpen(true)
+        setIsShowMore(true)
+        document.body.style.overflow = 'hidden';
     }
 
     return (
@@ -32,6 +33,7 @@ const Project = ({project}) => {
                         Show more
                     </button>
                 </div>}
+            {isShowMore && <Modal component={<ProjectModal data={project} setIsShowMore={setIsShowMore}/>}/>}
         </div>
     )
 }

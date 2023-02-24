@@ -6,6 +6,7 @@
     --minHeight: 500px;
     --headerFontSize: 60px;
     --greyAccent : #c7d0d8;
+    --normalFontColor: #000000
     /*access using var(--name)*/
 }
 
