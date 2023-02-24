@@ -1,6 +1,7 @@
 import React from "react";
 import "./ProjectModal.css"
 import Skills from "../About/Skills";
+import URLButton from "../../components/URLButton";
 
 const ProjectModal = ({data, setIsShowMore}) => {
 
@@ -18,7 +19,10 @@ const ProjectModal = ({data, setIsShowMore}) => {
                 <div style={{width: "100%", textAlign: "center"}}>
                     <img src={data.photo} alt={data.photo} className="projectModalImage"/>
                 </div>
-                <p>{data.info}</p>
+                {data.url !== null && <URLButton onClick={data.url} style={{width: "fit-content"}}>
+                    View Project
+                </URLButton>}
+                <p style={{whiteSpace: "pre-wrap"}}>{data.info}</p>
                 <br/>
                 <p style={{fontWeight: "bold"}}>{data.role}</p>
                 <Skills skills={data.technologies}/>

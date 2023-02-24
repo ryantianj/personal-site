@@ -6,8 +6,11 @@ import About from "./About/About"
 import Projects from "./Projects/Projects";
 import Certs from "./Certs/Certs";
 import Contact from "./Contact/Contact";
+import Notification from "../components/Notification/Notification";
+import Scroller from "../components/Scroller/Scroller";
 
 const Main = () => {
+
     return (
         <React.Fragment>
             {/*<NavBar />*/}
@@ -18,6 +21,8 @@ const Main = () => {
                 <Certs />
                 <Contact/>
             </div>
+            <Notification />
+            <Scroller />
         </React.Fragment>
     )
 }

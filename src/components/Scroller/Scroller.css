@@ -1,0 +1,25 @@
+.scrollerWrapper {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+}
+
+.scrollButton {
+    border: none;
+    background-color: var(--primaryColour);
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    opacity: 70%;
+}
+
+.scrollButton:hover {
+    cursor: pointer;
+}

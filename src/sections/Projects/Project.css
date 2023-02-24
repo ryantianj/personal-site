@@ -3,23 +3,48 @@
     width: 400px;
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
-    justify-content: center;
+    align-content: center;
+    justify-content: flex-start;
+    border-radius: 20px;
 }
 
 .projectItem:hover {
     cursor: pointer;
 }
 
+.projectItem:hover {
+    background-color: var(--primaryColour);
+    transform: scale(1.03);
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 101%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.projectItem:hover .tooltip {
+    visibility: visible;
+}
+
 .projectItemImage {
-    background-color: var(--greyAccent);
+    background-color: var(--primaryColour);
     border-radius: 20px;
     height: 225px;
     width: 400px;
 }
 
 
-.projectTitle{
+.projectTitle {
     text-align: center;
     width: 100%;
     font-weight: bold;
@@ -38,13 +63,21 @@
     overflow-y: scroll;
 }
 
-.projectItemShowMore {
-    background-color: var(--primaryColour);
-    border: 1px solid black;
-    border-radius: 20px;
-    margin-top: 10px;
-}
+@media only screen and (max-width: 768px) {
+    .projectItem {
+        width: 90%;
+    }
 
-.projectItemShowMore:hover {
-    cursor: help;
+    .projectItemImage {
+        width: 100%;
+    }
+
+    .projectItemInfo {
+        border-radius: 20px;
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+    }
+
 }

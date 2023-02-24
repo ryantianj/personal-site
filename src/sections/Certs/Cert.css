@@ -1,6 +1,34 @@
 .certWrapper {
-    min-width: 500px;
+    width: 500px;
     border: 1px solid black;
     padding: 10px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
+
+.certWrapper:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.certDetails {
+    padding: 10px;
+}
+
+.certNotification {
+    background-color: red;
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .certWrapper {
+        width: 90%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
