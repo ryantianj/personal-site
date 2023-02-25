@@ -11,6 +11,7 @@ const Scroller = () => {
     const handleDown = () => {
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
     }
+
     return (
         <div className="scrollerWrapper">
             <button onClick={handleUp} className="scrollButton">

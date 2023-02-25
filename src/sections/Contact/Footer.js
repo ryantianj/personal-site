@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css"
 import Button from "../../components/Button";
-import {AiFillLinkedin, AiTwotoneMail} from "react-icons/ai";
+import {AiFillLinkedin, AiTwotoneMail, AiFillGithub} from "react-icons/ai";
 import URLButton from "../../components/URLButton";
 import {email, github, linkedInURL} from "../../Information/Contact";
 
@@ -21,7 +21,7 @@ const Footer = () => {
                     <AiTwotoneMail /> Email
                 </Button>
                 <URLButton onClick={github} style={{fontSize: "20px"}}>
-                    <AiFillLinkedin /> Github
+                    <AiFillGithub /> Github
                 </URLButton>
             </div>
         </div>

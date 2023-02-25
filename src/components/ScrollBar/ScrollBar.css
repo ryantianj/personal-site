@@ -1,0 +1,13 @@
+.scrollBarWrapper {
+    position: fixed;
+    height: 4px;
+    top:0;
+    left:0;
+    z-index: 20;
+    width: 100%;
+}
+
+.scrollBarProgress {
+    height: 100%;
+    background-color: green;
+}

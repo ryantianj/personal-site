@@ -11,7 +11,7 @@ const NotificationBody = () => {
                 notificationCtx.setIsOpen(false)
             }, notificationCtx.time * 1000)
         }
-    }, [notificationCtx.time])
+    }, [notificationCtx])
     return (
         <div className="notification">
             {notificationCtx.component}
