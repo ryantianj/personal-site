@@ -2,4 +2,8 @@
     width: 100%;
     padding: 50px;
     color: var(--normalFontColor);
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -ms-box-sizing:border-box;
 }

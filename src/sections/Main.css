@@ -1,5 +1,6 @@
 .appWrapper {
     background-color: var(--backgroundColour);
+    overflow-x: hidden;
 }
 
 .helloWrapper {
