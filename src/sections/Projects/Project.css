@@ -8,32 +8,29 @@
     border-radius: 20px;
 }
 
-.projectItem:hover {
-    cursor: pointer;
+.projectItemInner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    border-radius: 20px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
 }
 
-.projectItem:hover {
-    background-color: var(--primaryColour);
-    transform: scale(1.03);
+.projectItem:hover .projectItemInner {
+    transform: rotateY(180deg);
 }
 
-.tooltip {
-    visibility: hidden;
-    width: 120px;
-    background-color: var(--normalFontColor);
-    color: var(--backgroundColour);
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
+.projectItemSummary {
     position: absolute;
-    z-index: 1;
-    bottom: 101%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.projectItem:hover .tooltip {
-    visibility: visible;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .projectItemImage {
@@ -52,16 +49,20 @@
 }
 
 .projectItemInfo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-color: var(--primaryColour);
     border-radius: 20px;
     padding: 20px;
-    height: 100%;
-    width: 100%;
     box-sizing: border-box;
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     -ms-box-sizing:border-box;
     overflow-y: scroll;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
 
 

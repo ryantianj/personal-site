@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import {useRoutes, BrowserRouter as Router, Navigate} from 'react-router-dom';
+import {useRoutes, BrowserRouter as Router} from 'react-router-dom';
 import Main from "./sections/Main";
 
 function App() {
