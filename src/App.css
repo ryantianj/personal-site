@@ -1,5 +1,6 @@
 :root {
     --primaryColour: #87CEEB;
+    --backgroundColour: white;
     --maxWidth: 1900px;
     --minWidth: 768px;
     --maxHeight: 1200px;

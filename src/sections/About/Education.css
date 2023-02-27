@@ -8,6 +8,15 @@
     -ms-box-sizing:border-box;
 }
 
+.educationHeader {
+    padding-top: 20px;
+    padding-bottom: 20px ;
+    width: 100%;
+    text-align: left;
+    font-weight: normal;
+    color: var(--normalFontColor);
+}
+
 @media only screen and (max-width: 768px) {
     .educationWrapper {
         flex:100%;

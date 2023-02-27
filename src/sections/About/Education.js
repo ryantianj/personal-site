@@ -8,12 +8,12 @@ import Divisor from "../../components/Divisor";
 const Education = () => {
     return (
         <div className="educationWrapper">
-            <h2 className="aboutmeHeaders">
+            <h2 className="educationHeader">
                 Education
             </h2>
             <EducationList education={educationInfo}/>
             <Divisor />
-            <h2 className="aboutmeHeaders">
+            <h2 className="educationHeader">
                 Interests
             </h2>
             <Skills skills={interestInfo} />

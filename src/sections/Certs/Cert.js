@@ -30,6 +30,7 @@ const Cert = ({cert}) => {
                 <p>Source: {cert.from}</p>
                 <p>ID: {cert.number}</p>
                 <p>{cert.date}</p>
+                <span className="tooltip">Click to view cert</span>
             </div>
         </div>
     )

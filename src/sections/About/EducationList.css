@@ -4,6 +4,7 @@
     justify-content: flex-start;
     gap: 20px;
     flex-wrap: wrap;
+    color: var(--normalFontColor);
 }
 
 .educationListItem {

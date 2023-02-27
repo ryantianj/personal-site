@@ -1,0 +1,23 @@
+.themeWrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    right: 10px;
+    top: 10px;
+}
+
+.themeIcons {
+    font-size: 30px;
+}
+
+.themeIcons:hover {
+    cursor: pointer;
+}
+
+html[data-theme='dark'] {
+    --backgroundColour: black;
+    --normalFontColor: white;
+}
+

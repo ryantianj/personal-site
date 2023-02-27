@@ -1,16 +1,21 @@
 .certWrapper {
     width: 500px;
-    border: 1px solid black;
+    border: 1px solid var(--normalFontColor);
     padding: 10px;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    color: var(--normalFontColor);
 }
 
 .certWrapper:hover {
     transform: scale(1.03);
     cursor: pointer;
+}
+
+.certWrapper:hover .tooltip {
+    visibility: visible;
 }
 
 .certDetails {

@@ -1,5 +1,5 @@
 .appWrapper {
-    background-color: white;
+    background-color: var(--backgroundColour);
 }
 
 .helloWrapper {
@@ -12,6 +12,7 @@
     min-height: var(--minHeight);
     margin-left: auto;
     margin-right: auto;
+    user-select: none;
 }
 
 .componentWrapper {
@@ -29,6 +30,7 @@
     width: 100%;
     font-size: var(--headerFontSize);
     text-align: center;
+    color: var(--normalFontColor);
 }
 
 @media only screen and (max-width: 768px) {
