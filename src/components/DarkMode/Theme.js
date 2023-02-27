@@ -5,24 +5,24 @@ import {MdOutlineLightMode, MdDarkMode} from "react-icons/md";
 const LIGHT_MODE = 'light'
 const DARK_MODE = 'dark'
 const Theme = () => {
-    const [isDark, setIsDark] = useState(window.matchMedia(`(prefers-color-scheme: ${DARK_MODE}`).matches)
+    const [isLight, setIsLight] = useState(window.matchMedia(`(prefers-color-scheme: ${LIGHT_MODE}`).matches)
 
     const handleClick = (e) => {
-        setIsDark(prevState => !prevState)
+        setIsLight(prevState => !prevState)
     }
 
     useEffect(() => {
-        if (isDark) {
+        if (isLight) {
             document.documentElement.setAttribute('data-theme', DARK_MODE)
         } else {
             document.documentElement.setAttribute('data-theme', LIGHT_MODE)
         }
-    }, [isDark])
+    }, [isLight])
 
     return (
         <div className="themeWrapper">
-            {!isDark && <MdOutlineLightMode className="themeIcons" onClick={handleClick}/>}
-            {isDark && <MdDarkMode className="themeIcons" style={{color: "white"}} onClick={handleClick}/>}
+            {!isLight && <MdOutlineLightMode className="themeIcons" onClick={handleClick}/>}
+            {isLight && <MdDarkMode className="themeIcons" style={{color: "white"}} onClick={handleClick}/>}
         </div>
     )
 }

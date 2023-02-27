@@ -5,7 +5,7 @@ const Sudoku = () => {
 
     return (
         <div className="sudokuWrapper">
-
+            tesrtib
         </div>
     )
 }
