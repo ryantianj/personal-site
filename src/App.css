@@ -7,7 +7,8 @@
     --minHeight: 500px;
     --headerFontSize: 60px;
     --greyAccent : #c7d0d8;
-    --normalFontColor: #000000
+    --normalFontColor: #000000;
+    --scrollBarColour: green;
     /*access using var(--name)*/
 }
 

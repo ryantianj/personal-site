@@ -26,5 +26,7 @@
 html[data-theme='dark'] {
     --backgroundColour: black;
     --normalFontColor: white;
+    animation-name: appear;
+    animation-duration: 1s;
 }
 

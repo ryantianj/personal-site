@@ -3,6 +3,5 @@ export const finalCall = "I am currently looking for internship opportunities re
 export const profilePhoto = photo
 export const email = "ryantian64@gmail.com"
 export const location = "Singapore"
-export const linkedInURL = "https://www.google.com"
-
+export const linkedInURL = "https://www.linkedin.com/in/ryan-tian-jun/"
 export const github = "https://github.com/ryantianj"
