@@ -26,6 +26,7 @@
 html[data-theme='dark'] {
     --backgroundColour: black;
     --normalFontColor: white;
+    --scrollBarColour: lightgreen;
     animation-name: appear;
     animation-duration: 1s;
 }

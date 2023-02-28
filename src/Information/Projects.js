@@ -54,6 +54,14 @@ export const projectsInfo = [
         photo: SAGEImage
     },
     {
+        title: "Sudoku Solver",
+        info: "Solves Sudoku by treating the problem as a CSP (constraint satisfaction problem) and backtracking to get the final result",
+        role: "Developer",
+        technologies: ["JavaScript"],
+        url: "/#/projects",
+        photo: SAGEImage
+    },
+    {
         title: "Neo",
         info: "Command Line Task Manager",
         role: "Software Developer",

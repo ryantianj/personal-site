@@ -1,9 +1,9 @@
 import React from "react";
+import "./Divisor.css"
 
 const Divisor = () => {
     return (
-        <div style={{ paddingBottom: "30px",
-            borderBottom: "2px solid black"}}> </div>
+        <div className="divisor"> </div>
     )
 }
 export default Divisor

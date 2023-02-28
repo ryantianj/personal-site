@@ -43,4 +43,10 @@
         min-width: 20px;
         padding: 20px;
     }
+    .greetingWrapper {
+        font-size: 70px;
+    }
+    .boldName {
+        font-size: 70px;
+    }
 }

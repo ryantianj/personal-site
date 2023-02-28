@@ -13,16 +13,16 @@ const Theme = () => {
 
     useEffect(() => {
         if (isLight) {
-            document.documentElement.setAttribute('data-theme', DARK_MODE)
-        } else {
             document.documentElement.setAttribute('data-theme', LIGHT_MODE)
+        } else {
+            document.documentElement.setAttribute('data-theme', DARK_MODE)
         }
     }, [isLight])
 
     return (
         <div className="themeWrapper">
-            {!isLight && <MdOutlineLightMode className="themeIcons" onClick={handleClick}/>}
-            {isLight && <MdDarkMode className="themeIcons" style={{color: "white"}} onClick={handleClick}/>}
+            {isLight && <MdOutlineLightMode className="themeIcons" onClick={handleClick}/>}
+            {!isLight && <MdDarkMode className="themeIcons" style={{color: "white"}} onClick={handleClick}/>}
         </div>
     )
 }
