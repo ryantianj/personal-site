@@ -4,6 +4,7 @@ import PHSImage from "./images/PHS.jpg"
 import SAGEImage from "./images/sage.png"
 import NEOImage from "./images/Neo.png"
 import WTGImage from "./images/TP.png"
+import {LOCAL} from "../Globals";
 export const projectsInfo = [
     {
         title: "P!ng",
@@ -58,7 +59,7 @@ export const projectsInfo = [
         info: "Solves Sudoku by treating the problem as a CSP (constraint satisfaction problem) and backtracking to get the final result",
         role: "Developer",
         technologies: ["JavaScript"],
-        url: "/#/projects",
+        url: LOCAL + "sudoku",
         photo: SAGEImage
     },
     {

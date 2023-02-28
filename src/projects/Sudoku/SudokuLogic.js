@@ -8,8 +8,53 @@ const SIZE = 9
 // Each state is represented by board, depth
 export const solveSudoku = function(board) {
     const solDepth = getSolutionDepth(board)
+    if (solDepth === SIZE * SIZE) {
+        return null
+    }
     return backTrack([board, solDepth])
 };
+
+function randomIntFromInterval(min, max) { // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+export const generateSudoku = (difficulty) => {
+    const board = new Array(9)
+    for (let i = 0; i < 9; i++) {
+        board[i] = new Array(9)
+    }
+    board.map(x => x.fill("."))
+
+    // start with random number in random box, then generate till depth = difficulty
+    const randomRow = randomIntFromInterval(0, 8)
+    const randomCol = randomIntFromInterval(0, 8)
+    const randomNumber = randomIntFromInterval(1, 9)
+    board[randomRow][randomCol] = randomNumber.toString()
+    const solution = backTrack([board, 81])
+    removeCells(solution, 81 - difficulty)
+    return solution
+}
+
+const removeCells = (board, difficulty) => {
+
+    while (difficulty > 0) {
+        const cellsWithNumbers = {}
+        for (let i = 0; i < SIZE; i++) {
+            for (let j = 0; j < SIZE; j++) {
+                if (board[i][j] !== ".") {
+                    cellsWithNumbers[i + " " + j] = i + " " + j
+                }
+            }
+        }
+        const cells = Object.keys(cellsWithNumbers)
+        const randomIndex = randomIntFromInterval(0, cells.length - 1)
+        const randomCell = cells[randomIndex]
+        board[parseInt(randomCell.substring(0, 1))][parseInt(randomCell.substring(2, 3))] = "."
+
+        difficulty--
+    }
+    return board
+}
 
 
 const backTrack = (csp) => {
@@ -27,6 +72,37 @@ const backTrack = (csp) => {
         addNumberToBoard(csp[0], domain[i], coords)
         if (inference(csp[0])) {
             const result = backTrack(csp)
+            if (result !== null) {
+                return result
+            }
+        }
+        removeNumberFromBoard(csp[0], domain[i], coords)
+        csp[1]++
+    }
+    return null
+}
+
+const generatePuzzle = (csp, board, difficulty) => {
+    if (csp[1] === difficulty) {
+        const newArray = [...csp[0]].map(function(arr) {
+            return arr.slice();
+        });
+        board = newArray
+    }
+    if (csp[1] === 0) { // depth
+        return board // board
+    }
+
+    const unassigned = selectUnassignedVar(csp)
+    const valueOrder = orderValues(csp, unassigned)
+    const domain = valueOrder[1]
+    const coords = valueOrder[0]
+
+    for (let i = 0; i < domain.length; i++) {
+        csp[1]--
+        addNumberToBoard(csp[0], domain[i], coords)
+        if (inference(csp[0])) {
+            const result = generatePuzzle(csp, board, difficulty)
             if (result !== null) {
                 return result
             }
@@ -61,14 +137,6 @@ const removeNumberFromBoard = (board, value, coords) => {
 
 // select value that is least restrictive
 const orderValues = (csp, unassigned) => {
-    const coords = unassigned[0]
-    const domain = unassigned[1]
-    const otherDomains = unassigned[2]
-
-
-    // for (let i = 0; i < domain.length; i++) {
-    //     for (let j = 0; )
-    // }
     return unassigned
 }
 
@@ -78,7 +146,7 @@ const selectUnassignedVar = (csp) => {
     const board = csp[0]
     const domains = {}
     let currentSmallestDomain = ["1","2","3","4","5","6","7","8","9"]
-    let domainCoords = [0, 0]
+    let domainCoords = "0 0"
     for (let i = 0; i < SIZE; i++) {
         for (let j = 0; j < SIZE; j++) {
             const cell = board[i][j]
@@ -127,7 +195,7 @@ const getDomain = (board, i, j) => {
 }
 
 
-const getSolutionDepth = (board) => {
+export const getSolutionDepth = (board) => {
     let count = 0
     for (let i = 0; i < SIZE; i++) {
         for (let j = 0; j < SIZE; j++) {
@@ -137,6 +205,46 @@ const getSolutionDepth = (board) => {
         }
     }
     return SIZE * SIZE - count
+}
+
+export const checkSolution = (board) => {
+    const result = []
+    const checkRow = getRowDuplicates(board)
+    console.log(checkRow)
+}
+
+const getRowDuplicates = (board) => {
+    let dups = []
+    for (let i = 0; i < SIZE; i++) {
+        const hashMap = {}
+        for (let j = 0; j < SIZE; j++) {
+            const current = board[i][j]
+            if (current !== ".") {
+                if (hashMap[current] !== undefined) {
+                    const currentArray = hashMap[current]
+                    currentArray.push(i + " " + j)
+                } else {
+                    const newArray = []
+                    newArray.push(i + " " + j)
+                    hashMap[current] = newArray
+                }
+            }
+        }
+        for (const key in hashMap) {
+            if (hashMap[key].length > 1) {
+                dups = dups.concat(hashMap[key])
+            }
+        }
+    }
+    return dups
+}
+
+const getColDuplicates = (board) => {
+
+}
+
+const getBoxDuplicates = (board) => {
+
 }
 
 export const isValidSudoku = function(board) {

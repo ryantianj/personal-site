@@ -11,7 +11,7 @@ function App() {
             element: <Main />,
         }
         , {
-            path: "/projects",
+            path: "/sudoku",
             element: <Sudoku />
         }
     ])

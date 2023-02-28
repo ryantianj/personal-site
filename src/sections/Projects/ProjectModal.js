@@ -2,11 +2,8 @@ import React from "react";
 import "./ProjectModal.css"
 import Skills from "../About/Skills";
 import URLButton from "../../components/URLButton";
-import {useNavigate} from "react-router-dom";
 
 const ProjectModal = ({data, setIsShowMore}) => {
-    const navigate = useNavigate()
-
     const handleClick = () => {
         // can stop propagation here to not flip project back after modal close
       setIsShowMore(false)
@@ -24,9 +21,6 @@ const ProjectModal = ({data, setIsShowMore}) => {
                 {data.url !== null && <URLButton onClick={data.url} style={{width: "fit-content"}}>
                     View Project
                 </URLButton>}
-                <button onClick={() => navigate("/projects")}>
-                    test
-                </button>
                 <p style={{whiteSpace: "pre-wrap"}}>{data.info}</p>
                 <br/>
                 <p style={{fontWeight: "bold"}}>{data.role}</p>
