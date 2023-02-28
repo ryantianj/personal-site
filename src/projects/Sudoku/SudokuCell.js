@@ -1,40 +1,47 @@
 import React, {useContext, useEffect, useState} from "react";
+import "./SudokuBoard.css"
 import sudokuContext from "./SudokuContext";
 
-const SudokuCell = ({row, col}) => {
-    const [value, setValue] = useState("")
-    const [readOnly, setReadOnly] = useState(false)
+const SudokuCell = ({row, col, cell}) => {
+    const [value, setValue] = useState(cell.getValue())
     const sudokuCtx = useContext(sudokuContext)
-    const colIndex = (col) % 3 + (row % 3) * 3
-    const rowIndex = Math.floor(col / 3) + Math.floor(row / 3) * 3
+
+    const handleInputChange = (e) => {
+        const inputValue = e.target.value
+        if (1 <= inputValue && inputValue <= 9) {
+            sudokuCtx.editCell(row, col, inputValue.toString())
+            setValue(inputValue)
+        }
+
+    }
 
     useEffect(() => {
-        if (sudokuCtx.board !== null) {
-            const val = sudokuCtx.board[rowIndex][colIndex]
-            if (val !== ".") {
-                setValue(sudokuCtx.board[rowIndex][colIndex])
-                setReadOnly(true)
-            } else {
-                setValue("")
-                setReadOnly(false)
-            }
-        } else {
+        if (cell.getValue() === ".") {
             setValue("")
-        }
-    }, [sudokuCtx.board])
-    const handleValue = (e) => {
-        const inputValue = e.target.value
-        if (0 < inputValue && inputValue <= 9) {
-            sudokuCtx.setBoard(rowIndex, colIndex, inputValue)
-            setValue(inputValue)
         } else {
-            sudokuCtx.setBoard(rowIndex, colIndex, ".")
-            setValue("")
+            setValue(cell.getValue())
         }
+
+    }, [cell])
+
+    const getCSSClass = () => {
+        // rows 2, 5 have bottom border, cols 2, 5 have right border
+        let currentString = 'sudokuCell'
+        if (row === 2 || row === 5) {
+            currentString += ' sudokuCellBottom'
+        }
+        if (col === 2 || col === 5) {
+            currentString += ' sudokuCellRight'
+        }
+        return currentString
     }
+
+    const className = getCSSClass()
+
     return (
-        <div className="sudokuCell">
-            <input type="number" className="sudokuCellInput" onChange={handleValue} value={value} readOnly={readOnly}/>
+        <div className={className}>
+            <input type="number" className="sudokuCellInput" onChange={handleInputChange} value={value}
+            readOnly={sudokuCtx.board.getCell(row, col).getReadOnly()}/>
         </div>
     )
 }

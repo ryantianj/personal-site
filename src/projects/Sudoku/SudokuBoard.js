@@ -1,15 +1,16 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./SudokuBoard.css"
-import SudokuSubBox from "./SudokuSubBox";
+import sudokuContext from "./SudokuContext";
+import SudokuCell from "./SudokuCell";
+
 
 const SudokuBoard = () => {
-    const sudokuArray = Array.apply("", Array(9))
+    const sudokuCtx = useContext(sudokuContext)
 
     return (
         <div className="sudokuBoardWrapper">
-            {sudokuArray.map((x, i) => {
-                return <SudokuSubBox key={i} row={i} />
-            })}
+            {sudokuCtx.board.getBoard().map((row, i) => row.map((cell, j) =>
+                <SudokuCell key={i + " " + j} row={i} col={j} cell={cell}/>))}
         </div>
     )
 }

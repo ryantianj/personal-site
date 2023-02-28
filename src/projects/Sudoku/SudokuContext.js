@@ -1,48 +1,39 @@
 import React, {useState} from "react";
+import Board from "./Logic/Board";
 
 const SudokuContext = React.createContext({
     board: [],
-    setBoard: (row, col, value) => {},
-    setWholeBoard: () => {},
-    getBoard: () => {},
+    editCell: () => {},
+    setFullBoard: () => {},
     clearBoard: () => {}
 });
 export const SudokuContextProvider = (props) => {
-    const create2DArray = () => {
-        const board = new Array(9)
-        for (let i = 0; i < 9; i++) {
-            board[i] = new Array(9)
-        }
-        board.map(x => x.fill("."))
-        return board
-    }
-    const [board, setBoardValue] = useState(create2DArray())
+    const [board, setBoardValue] = useState(new Board())
 
-    const setBoard = (row, col, value) => {
+    const editCell = (row, col, value) => {
         setBoardValue(prevState => {
-            const newArray = [...prevState].map(function(arr) {
-                return arr.slice();
-            });
-            newArray[row][col] = value === "" ? "." : value
-            return newArray
+            prevState.editCell(row, col, value)
+            return prevState
         })
     }
 
-    const getBoard = () => {
-        return board
+    const setFullBoard = (boardString) => {
+        const newBoard = new Board(boardString)
+        setBoardValue(newBoard)
     }
 
     const clearBoard = () => {
-        setBoardValue(create2DArray())
+        const newBoard = new Board()
+        setBoardValue(newBoard)
     }
+
 
     return (
         <SudokuContext.Provider value={{
             board: board,
-            setBoard: setBoard,
-            getBoard: getBoard,
-            clearBoard: clearBoard,
-            setWholeBoard: setBoardValue
+            editCell: editCell,
+            setFullBoard: setFullBoard,
+            clearBoard: clearBoard
         }}>
             {props.children}
         </SudokuContext.Provider>
