@@ -6,6 +6,7 @@ import SudokuGame from "./SudokuGame";
 
 const Sudoku = () => {
     const [tab, setTab] = useState(0) // 0 for game, 1 for solver
+    console.log("render")
 
     return (
         <SudokuContextProvider>

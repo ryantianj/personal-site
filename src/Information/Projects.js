@@ -2,6 +2,7 @@ import pingImage from "./images/Ping.jpg"
 import personalSiteImage from "./images/Personal Website.png"
 import PHSImage from "./images/PHS.jpg"
 import SAGEImage from "./images/sage.png"
+import SudokuImage from "./images/Sudoku.png"
 import NEOImage from "./images/Neo.png"
 import WTGImage from "./images/TP.png"
 import {LOCAL} from "../Globals";
@@ -56,11 +57,12 @@ export const projectsInfo = [
     },
     {
         title: "Sudoku Solver",
-        info: "Solves Sudoku by treating the problem as a CSP (constraint satisfaction problem) and backtracking to get the final result",
+        info: "Solves Sudoku by treating the problem as a CSP (constraint satisfaction problem) and backtracking to get the final result. " +
+            "\n\nOriginally a leetcode problem, I decided to convert my solution to JavaScript. Also for my grandparents who does Sudoku in their free time.",
         role: "Developer",
         technologies: ["JavaScript"],
         url: LOCAL + "sudoku",
-        photo: SAGEImage
+        photo: SudokuImage
     },
     {
         title: "Neo",

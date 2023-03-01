@@ -1,18 +1,15 @@
 import React from "react";
 import "./Button.css"
-import {useNavigate} from "react-router-dom";
-import {LOCAL} from "../Globals";
-import Button from "./Button";
+import {HASH_ROUTE, LOCAL} from "../Globals";
 
 const URLButton = ({onClick, children, style}) => {
-    const navigate = useNavigate()
     const parseURL = (url) => {
         if (url.substring(0, 5) === LOCAL) {
-            const path = "/" + url.substring(5)
+            const path = HASH_ROUTE + url.substring(5)
             return (
-                <Button onClick={() => navigate(path)}>
-                    View Project
-                </Button>
+                <a style={style} className="button" href={path} target="_blank" rel="noreferrer">
+                    {children}
+                </a>
             )
         }
 
