@@ -1,9 +1,3 @@
-/**
- * @param {character[][]} board
- * @return {void} Do not return anything, modify board in-place instead.
- */
-
-
 const SIZE = 9
 // Each state is represented by board, depth
 export const solveSudoku = function(board) {
@@ -207,17 +201,69 @@ export const getSolutionDepth = (board) => {
     return SIZE * SIZE - count
 }
 
-export const checkSolution = (board) => {
-    const result = []
-    const checkRow = getRowDuplicates(board)
-    console.log(checkRow)
+export const checkSolution = (board, row, col) => {
+    const checkRow = getRowDuplicates(board, row , col)
+    const checkCol = getColDuplicates(board, row , col)
+    const checkBox = getBoxDuplicates(board, row , col)
+    return checkRow.concat(checkCol).concat(checkBox)
 }
 
-const getRowDuplicates = (board) => {
+const getRowDuplicates = (board, row, col) => {
     let dups = []
+    const hashMap = {}
     for (let i = 0; i < SIZE; i++) {
-        const hashMap = {}
-        for (let j = 0; j < SIZE; j++) {
+        const current = board[row][i]
+        if (current !== ".") {
+            if (hashMap[current] !== undefined) {
+                const currentArray = hashMap[current]
+                currentArray.push(row + " " + i)
+            } else {
+                const newArray = []
+                newArray.push(row + " " + i)
+                hashMap[current] = newArray
+            }
+        }
+    }
+    for (const key in hashMap) {
+        if (hashMap[key].length > 1) {
+            dups = dups.concat(hashMap[key])
+        }
+    }
+    return dups
+
+}
+
+const getColDuplicates = (board, row, col) => {
+    let dups = []
+    const hashMap = {}
+    for (let i = 0; i < SIZE; i++) {
+        const current = board[i][col]
+        if (current !== ".") {
+            if (hashMap[current] !== undefined) {
+                const currentArray = hashMap[current]
+                currentArray.push(i + " " + col)
+            } else {
+                const newArray = []
+                newArray.push(i + " " + col)
+                hashMap[current] = newArray
+            }
+        }
+    }
+    for (const key in hashMap) {
+        if (hashMap[key].length > 1) {
+            dups = dups.concat(hashMap[key])
+        }
+    }
+    return dups
+}
+
+const getBoxDuplicates = (board, row, col) => {
+    let dups = []
+    const hashMap = {}
+    const colStart = Math.floor(col / 3) * 3
+    const rowStart = Math.floor(row / 3) * 3
+    for (let i = rowStart; i < rowStart + 3; i++) {
+        for (let j = colStart; j < colStart + 3; j++) {
             const current = board[i][j]
             if (current !== ".") {
                 if (hashMap[current] !== undefined) {
@@ -230,21 +276,13 @@ const getRowDuplicates = (board) => {
                 }
             }
         }
-        for (const key in hashMap) {
-            if (hashMap[key].length > 1) {
-                dups = dups.concat(hashMap[key])
-            }
+    }
+    for (const key in hashMap) {
+        if (hashMap[key].length > 1) {
+            dups = dups.concat(hashMap[key])
         }
     }
     return dups
-}
-
-const getColDuplicates = (board) => {
-
-}
-
-const getBoxDuplicates = (board) => {
-
 }
 
 export const isValidSudoku = function(board) {

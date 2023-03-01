@@ -12,6 +12,10 @@ const SudokuCell = ({row, col, cell}) => {
             sudokuCtx.editCell(row, col, inputValue.toString())
             setValue(inputValue)
         }
+        if (inputValue === "") {
+            setValue(inputValue)
+            sudokuCtx.editCell(row, col, ".")
+        }
 
     }
 
@@ -23,6 +27,12 @@ const SudokuCell = ({row, col, cell}) => {
         }
 
     }, [cell])
+
+    useEffect(() => {
+        if (cell.getIsWrong()) {
+            setValue(cell.getValue())
+        }
+    }, [cell, sudokuCtx.update])
 
     const getCSSClass = () => {
         // rows 2, 5 have bottom border, cols 2, 5 have right border
@@ -36,11 +46,20 @@ const SudokuCell = ({row, col, cell}) => {
         return currentString
     }
 
-    const className = getCSSClass()
+    const getCSSClassInput = () => {
+        if (sudokuCtx.board.getCell(row, col).getIsWrong() && !sudokuCtx.board.getCell(row, col).getReadOnly()) {
+            return "redFont sudokuCellInput"
+        }
+        if (!sudokuCtx.board.getCell(row, col).getReadOnly()) {
+            return "greenFont sudokuCellInput"
+        }
+
+        return "sudokuCellInput"
+    }
 
     return (
-        <div className={className}>
-            <input type="number" className="sudokuCellInput" onChange={handleInputChange} value={value}
+        <div className={getCSSClass()}>
+            <input type="number" className={getCSSClassInput()} onChange={handleInputChange} value={value}
             readOnly={sudokuCtx.board.getCell(row, col).getReadOnly()}/>
         </div>
     )

@@ -29,6 +29,21 @@
     -ms-box-sizing:border-box;
 }
 
+.numberInput {
+    display: flex;
+    width: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.greenFont {
+    color: lightgreen;
+}
+
+.redFont {
+    color: red;
+}
+
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;

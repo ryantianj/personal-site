@@ -3,14 +3,27 @@ import "./Sudoku.css"
 import SudokuBoard from "./SudokuBoard";
 import sudokuContext from "./SudokuContext";
 import Button from "../../components/Button";
-import {checkSolution, generateSudoku, getSolutionDepth, isValidSudoku, solveSudoku} from "./Logic/SudokuLogic"
+import {generateSudoku, solveSudoku} from "./Logic/SudokuLogic"
 
 const SudokuGame = () => {
     const GameBar = () => {
+        const [difficulty, setDifficulty] = useState(40)
+        const [difficultyError, setDifficultyError] = useState("")
         const sudokuCtx = useContext(sudokuContext)
         const handleGenerate = () => {
-            const generated = generateSudoku(20)
-            sudokuCtx.setFullBoard(generated)
+            if (25 <= difficulty && difficulty <= 80) {
+                const generated = generateSudoku(difficulty)
+                sudokuCtx.setFullBoard(generated)
+                setDifficultyError("")
+            } else {
+                setDifficultyError("Must be from 25 to 80")
+            }
+        }
+
+        const handleEnter = (e) => {
+            if (e.key === 'Enter') {
+                handleGenerate()
+            }
         }
 
         const handleSolution = () => {
@@ -18,26 +31,36 @@ const SudokuGame = () => {
             sudokuCtx.setFullBoard(solution)
         }
 
-        const handleCheck = () => {
-
+        const handleReset = () => {
+            sudokuCtx.resetBoard()
         }
 
         const handleClear = () => {
             sudokuCtx.clearBoard()
         }
+
+        const handleDifficultyChange = (e) => {
+            setDifficulty(e.target.value)
+        }
+
         return (
-            <div>
+            <div className="sudokuWrapper">
+                <div className="sudokuGameBar">
+                    Key in number of cells that are filled in, from 25 to 80:
+                    <input type="number" value={difficulty} onChange={handleDifficultyChange} className="numberInput" onKeyDown={handleEnter}/>
+                    {difficultyError}
+                </div>
                 <Button onClick={handleGenerate}>
-                    Generate
-                </Button>
-                <Button onClick={handleCheck}>
-                    Check Solution
+                    Generate puzzle
                 </Button>
                 <Button onClick={handleSolution}>
                     Show Solution
                 </Button>
+                <Button onClick={handleReset}>
+                    Restart
+                </Button>
                 <Button onClick={handleClear}>
-                    Clear
+                    Clear entire board
                 </Button>
             </div>
         )
@@ -46,8 +69,8 @@ const SudokuGame = () => {
         <div className="componentWrapper">
             <div className="sudokuWrapper">
                 <SudokuBoard />
-                <GameBar />
             </div>
+            <GameBar />
         </div>
 
     )

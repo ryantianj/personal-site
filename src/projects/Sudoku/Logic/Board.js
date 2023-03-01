@@ -59,8 +59,7 @@ class Board {
 
 
     editCell = (row, col, value, readOnly = false) => {
-        const cell = this.getCell(row, col)
-        cell.editValue(value, readOnly)
+        this.#board[row][col] = new Cell(row, col, value, readOnly)
     }
 
     editAllCells = (board) => {
@@ -68,6 +67,26 @@ class Board {
            for (let col = 0; col < Board.SIZE; col++) {
                this.editCell(row, col, board[row][col])
            }
+        }
+    }
+
+    clearNonReadOnlyCells = () => {
+        for (let row = 0; row < Board.SIZE; row++) {
+            for (let col = 0; col < Board.SIZE; col++) {
+                if (!this.#board[row][col].getReadOnly()) {
+                    this.editCell(row, col,".")
+                }
+            }
+        }
+    }
+
+    correctAllReadOnlyCell = () => {
+        for (let row = 0; row < Board.SIZE; row++) {
+            for (let col = 0; col < Board.SIZE; col++) {
+                if (!this.#board[row][col].getReadOnly()) {
+                    this.#board[row][col].setWrong(false)
+                }
+            }
         }
     }
 

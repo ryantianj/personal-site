@@ -1,6 +1,8 @@
 class Cell {
     #value
     #readOnly = false;
+
+    isWrong = false;
     #row;
     #col;
     static EMPTY = '.'
@@ -9,6 +11,14 @@ class Cell {
         this.#row = row
         this.#col = col
         this.#readOnly = readOnly
+    }
+
+    setWrong = (isWrong) => {
+        this.isWrong = isWrong
+    }
+
+    getIsWrong = () => {
+        return this.isWrong
     }
 
     editValue = (value, readOnly) => {
