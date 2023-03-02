@@ -1,6 +1,8 @@
-import {DiPython, DiJava, DiJavascript1, DiGo, DiReact, DiCss3, DiMongodb, DiPostgresql} from 'react-icons/di'
+import {DiPython, DiJava, DiJavascript1, DiGo, DiReact, DiCss3, DiMongodb, DiPostgresql, DiNodejsSmall} from 'react-icons/di'
 import {IoLogoFirebase} from "react-icons/io5";
-export const skillsInfo = ["Problem Solver", "Teamwork"]
+import {TbBrandNextjs} from "react-icons/tb";
+
+export const skillsInfo = []
 
 export const bioInfo = "\n" +
     "Hello, I'm Ryan. I am a Computer Science undergraduate at the National University of Singapore. " +
@@ -18,8 +20,8 @@ export const softwareInfo = [
     {text: "Firebase", icon: <IoLogoFirebase />},
     {text: "MongoDB", icon: <DiMongodb />},
     {text: "PostgreSQL", icon: <DiPostgresql />},
-
-
+    {text: "NodeJS", icon: <DiNodejsSmall />},
+    {text: "NextJS", icon: <TbBrandNextjs />},
 ]
 
 export const educationInfo = [{school: "National University of Singapore", type: "Bachelor of Computing in Computer Science", year: 2024}]
