@@ -2,7 +2,7 @@ import React from 'react'
 import "./Education.css"
 import EducationList from "./EducationList";
 import {educationInfo, interestInfo} from "../../Information/About";
-import Skills from "./Skills";
+import Skills from "../../components/Skills";
 import Divisor from "../../components/Divisor";
 
 const Education = () => {

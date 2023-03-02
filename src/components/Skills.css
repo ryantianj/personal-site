@@ -1,0 +1,12 @@
+.skillWrapper {
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.skillsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}

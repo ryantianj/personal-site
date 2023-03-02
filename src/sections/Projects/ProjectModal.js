@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProjectModal.css"
-import Skills from "../About/Skills";
+import Skills from "../../components/Skills";
 import URLButton from "../../components/URLButton";
 
 const ProjectModal = ({data, setIsShowMore}) => {

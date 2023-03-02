@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import backUp from "../../Information/logo192.png";
-import Skills from "../About/Skills";
+import Skills from "../../components/Skills";
 import "./Project.css"
 import ProjectModal from "./ProjectModal";
 import Modal from "../../components/Modal";

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Aboutme.css"
-import Skills from "./Skills";
+import Skills from "../../components/Skills";
 import Software from "./Software";
 import Divisor from "../../components/Divisor";
 
