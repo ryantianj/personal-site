@@ -61,7 +61,7 @@ export const projectsInfo = [
             "\n\nOriginally a leetcode problem, I decided to convert my solution to JavaScript. Also for my grandparents who does Sudoku in their free time.",
         role: "Developer",
         technologies: ["JavaScript"],
-        url: LOCAL + "sudoku",
+        url: "https://ryantianj.github.io/sudoku/",
         photo: SudokuImage
     },
     {

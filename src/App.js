@@ -2,7 +2,6 @@ import React from "react";
 import './App.css';
 import {createHashRouter, RouterProvider} from 'react-router-dom';
 import Main from "./sections/Main";
-import Sudoku from "./projects/Sudoku/Sudoku";
 
 function App() {
     const router = createHashRouter([
@@ -10,10 +9,7 @@ function App() {
             path: "/",
             element: <Main />,
         }
-        , {
-            path: "/sudoku",
-            element: <Sudoku />
-        }
+
     ])
   return (
       <React.Fragment>
