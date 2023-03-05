@@ -31,7 +31,7 @@ const Skills = ({skills}) => {
                 case 'l' :
                 case 's':
                 case 'y' :
-                    return {backgroundColor: "blue"}
+                    return {backgroundColor: "blue", color: "white"}
                 case 'g':
                 case 'm' :
                 case 't':

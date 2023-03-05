@@ -1,5 +1,5 @@
 :root {
-    --primaryColour: #87CEEB;
+    --primaryColour: #98c6fa;
     --backgroundColour: white;
     --maxWidth: 1900px;
     --minWidth: 768px;
@@ -9,7 +9,7 @@
     --headerMobileFontSize: 40px;
     --greyAccent : #c7d0d8;
     --normalFontColor: #000000;
-    --scrollBarColour: green;
+    --scrollBarColour: orange;
     /*access using var(--name)*/
 }
 

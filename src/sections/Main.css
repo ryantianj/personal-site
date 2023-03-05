@@ -14,6 +14,11 @@
     margin-left: auto;
     margin-right: auto;
     user-select: none;
+    background-image: url("../Information/images/back.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .componentWrapper {
@@ -32,6 +37,7 @@
     font-size: var(--headerFontSize);
     text-align: center;
     color: var(--normalFontColor);
+    font-family: "Arial Black", serif;
 }
 
 .tooltip {

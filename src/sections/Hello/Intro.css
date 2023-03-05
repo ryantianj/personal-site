@@ -11,6 +11,7 @@
 .greetingWrapper {
     font-size: 100px;
     color: var(--normalFontColor);
+    font-family: "Arial Black", serif
 }
 
 .boldName {

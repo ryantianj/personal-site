@@ -1,4 +1,5 @@
 import photo from "./logo192.png"
+import me from "./images/me.jpg"
 export const IntroInfo = {
     greeting: "Hello, I'm",
     name: "Ryan Tian",
@@ -6,5 +7,5 @@ export const IntroInfo = {
 }
 
 export const portraitInfo = {
-    photo: photo
+    photo: me
 }
