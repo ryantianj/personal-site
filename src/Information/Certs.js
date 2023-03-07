@@ -1,7 +1,7 @@
 import udemyImage from "./images/Udemy.png"
 import orbitalImage from "./images/orbital.jfif"
 import mongoDBUniImage from "./images/mongodb university.jfif"
-import AISGImage from "/images/AISG.jpeg"
+import AISGImage from "./images/AISG.jpeg"
 export const certsInfo = [
     {
         url: "https://credentials.nus.edu.sg/ccdf6d1c-267a-4c47-a4a3-56623598d117",
