@@ -5,6 +5,7 @@ import SAGEImage from "./images/sage.png"
 import SudokuImage from "./images/Sudoku.png"
 import NEOImage from "./images/Neo.png"
 import WTGImage from "./images/TP.png"
+import groceryImage from "./images/grocery-scraper.png"
 import {LOCAL} from "../Globals";
 export const projectsInfo = [
     {
@@ -19,6 +20,16 @@ export const projectsInfo = [
         technologies: ["React Native", "CSS", "Firebase"],
         url: "https://github.com/ryantianj/ping",
         photo: pingImage
+    },
+    {
+        title: "Grocery Scrapper",
+        info: "Web scraping tool to search for the lowest prices from local delivery stores. This app proved challenging to develop " +
+            "as some sites were server side rendered while others were client side rendered." +
+            "\n\nPuppeteer and axios were used to pull sites, cheerio was used to find the information. Built with nextjs and hosted on vercel.",
+        role: "Full Stack developer",
+        technologies: ["React", "NodeJS", "AWS Lambda", "Google Cloud", "CSS module", "NextJS", "Puppeteer", "Cheerio"],
+        url: "https://grocery-scraper-nine.vercel.app/",
+        photo: groceryImage
     },
     {
         title: "Personal Website",
@@ -60,13 +71,13 @@ export const projectsInfo = [
         info: "Solves Sudoku by treating the problem as a CSP (constraint satisfaction problem) and backtracking to get the final result. " +
             "\n\nOriginally a leetcode problem, I decided to convert my solution to JavaScript. Also for my grandparents who does Sudoku in their free time.",
         role: "Developer",
-        technologies: ["JavaScript"],
+        technologies: ["JavaScript", "ReactJS"],
         url: "https://ryantianj.github.io/sudoku/",
         photo: SudokuImage
     },
     {
         title: "Neo",
-        info: "Command Line Task Manager",
+        info: "Command Line Task Manager, to store, display and view tasks",
         role: "Software Developer",
         technologies: ["Java", "JavaFX"],
         url: "https://github.com/ryantianj/ip",
@@ -74,7 +85,7 @@ export const projectsInfo = [
     },
     {
         title: "WhereTourGo",
-        info: "Command Line Contact Book",
+        info: "Command Line Contact Book, to store, display and view contacts. Complete with features such as summary graphs, tagging etc.",
         role: "Team Leader, Software Developer",
         technologies: ["Java", "JavaFX"],
         url: "https://github.com/ryantianj/tp",
