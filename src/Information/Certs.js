@@ -12,10 +12,18 @@ export const certsInfo = [
         photo: orbitalImage
     },
     {
+        url: "https://www.udemy.com/certificate/UC-f3099974-70a7-403c-9f70-c0deb370f60d/",
+        number: "UC-f3099974-70a7-403c-9f70-c0deb370f60d",
+        from: "Udemy",
+        name: "React - The Complete Guide",
+        date: "Mar 2023",
+        photo: udemyImage
+    },
+    {
         url: "https://www.udemy.com/certificate/UC-79665f64-79ee-42c4-b0fd-3a67ce45beb7/",
         number: "UC-79665f64-79ee-42c4-b0fd-3a67ce45beb7",
         from: "Udemy",
-        name: "Udemy - Intro to Python",
+        name: "Introduction to Programming using Python",
         date: "Jul 2021",
         photo: udemyImage
     },
