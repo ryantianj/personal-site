@@ -59,8 +59,8 @@ export const projectsInfo = [
         title: "SAGE",
         info: "Web Application for social networking. This project was done at a start-up, who's goal was to connect like minded" +
             " individuals, and provide mentoring, workshops and other social networking events." +
-            "\n\n I acted as the technical lead during my time there, directing the movement of the project while implementing features." +
-            "\n\n Some of the more prominent features include an OTP authentication system and searching system",
+            "\n\nI acted as the technical lead during my time there, directing the movement of the project while implementing features." +
+            "\n\nSome of the more prominent features include an OTP authentication system and searching system",
         role: "Tech Lead, Software Developer",
         technologies: ["React", "Python", "CSS", "MongoDB", "Firebase"],
         url: "https://app.sagexperiences.com/login",
@@ -68,10 +68,11 @@ export const projectsInfo = [
     },
     {
         title: "Sudoku Solver",
-        info: "Solves Sudoku by treating the problem as a CSP (constraint satisfaction problem) and backtracking to get the final result. " +
+        info: "Solves Sudoku by treating the problem as a CSP (constraint satisfaction problem) and backtracking to get the final result. The image recognition" +
+            " makes use of the Tesseract library, an open source optical character recognition engine sponsored by google." +
             "\n\nOriginally a leetcode problem, I decided to convert my solution to JavaScript. Also for my grandparents who does Sudoku in their free time.",
         role: "Developer",
-        technologies: ["JavaScript", "ReactJS"],
+        technologies: ["JavaScript", "ReactJS", "Tesseract"],
         url: "https://ryantianj.github.io/sudoku/",
         photo: SudokuImage
     },
