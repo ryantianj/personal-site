@@ -25,7 +25,7 @@ export const projectsInfo = [
         title: "Grocery Scrapper",
         info: "Web scraping tool to search for the lowest prices from local delivery stores. This app proved challenging to develop " +
             "as some sites were server side rendered while others were client side rendered." +
-            "\n\nPuppeteer and axios were used to pull sites, cheerio was used to find the information. Built with nextjs and hosted on vercel.",
+            "\n\nPuppeteer and axios were used to pull site data, cheerio was used to find the information. Built with nextjs and hosted on vercel.",
         role: "Full Stack developer",
         technologies: ["React", "NodeJS", "AWS Lambda", "Google Cloud", "CSS module", "NextJS", "Puppeteer", "Cheerio"],
         url: "https://grocery-scraper-nine.vercel.app/",

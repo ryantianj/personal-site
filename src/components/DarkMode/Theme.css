@@ -1,5 +1,5 @@
 .themeWrapper {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;

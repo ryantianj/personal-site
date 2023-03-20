@@ -1,5 +1,5 @@
 import photo from "./logo192.png"
-export const finalCall = "I am currently looking for internship opportunities related to software development."
+export const finalCall = "Feel free to email me to find out more!"
 export const profilePhoto = photo
 export const email = "ryantian64@gmail.com"
 export const location = "Singapore"

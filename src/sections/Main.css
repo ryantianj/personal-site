@@ -16,6 +16,7 @@
     margin-right: auto;
     user-select: none;
     background-image: url("../Information/images/back.jpg");
+    background-color: var(--backgroundColour);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
