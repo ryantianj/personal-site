@@ -27,5 +27,7 @@ export const softwareInfo = [
     {text: "NextJS", icon: <TbBrandNextjs />},
 ]
 
-export const educationInfo = [{school: "National University of Singapore", type: "Bachelor of Computing in Computer Science", year: 2024}]
+export const educationInfo = [
+    {school: "National University of Singapore", type: "Bachelor of Computing in Computer Science (Honours)", year: 2024}
+]
 export const interestInfo = ["Squash", "Badminton", "Netflix", "Gaming", "Food", "Chess"]
