@@ -6,15 +6,41 @@ import SudokuImage from "./images/Sudoku.png"
 import NEOImage from "./images/Neo.png"
 import WTGImage from "./images/TP.png"
 import groceryImage from "./images/grocery-scraper.png"
+import placeholder from "./images/placeholder.png"
+import lexisJobs from "./images/LexisJobs.png"
 import {LOCAL} from "../Globals";
 export const projectsInfo = [
+    {
+        title: "LexisJobs",
+        info:
+            "LexisJobs is a job searching / matching software web application. The software aims to connect employers with employees and find suitable matches for each job. " +
+            "\n\nAs a full stack developer, there were numerous features I was tasked with. More notably," +
+            "\n\n1. Web scraper / crawler" +
+            "\n2. Implemented a CMS for the job portal " +
+            "\n3. Implemented openAI API's as part of a new feature" +
+            "\n4. Basic resume parser" +
+            "\n5. Optimization of existing code to reduce costs" +
+            "\n\nThis was done as part of my internship at Challenger Technologies software department (ChuGo)"
+        ,
+        role: "Full Stack developer",
+        technologies: ["React", "CSS", "AWS", "NodeJs", "Express", "PostgreSQL"],
+        url: "https://www.lexisjobs.asia/",
+        photo: lexisJobs
+    },
     {
         title: "P!ng",
         info: "P!ng was the result of a summer project undertaken by my friend Marcus and I.\n" +
             "\n" +
-            "We aimed to create a mobile application to connect like minded individuals based on their passion and interests, while offering the flexibility of scalability.\n" +
-            "\n" +
-            "It was created using the React Native and Google Firebase framework, incorporating many software development practices in the mix too." +
+            "We aimed to create a social media mobile application to connect like minded individuals based on their passion and interests, while offering the flexibility of scalability.\n" +
+            "\nSome notable features of P!ng:" +
+            "\n\n1. Individual chat, group chat, forums" +
+            "\n2. Friend system (add people)" +
+            "\n3. Profile creation" +
+            "\n4. Settings, from privacy settings, security etc" +
+            "\n5. Notifications system" +
+            "\n6. Image uploading" +
+            "\n7. Global searching" +
+            "\n\nP!ng was created using the React Native and Google Firebase framework, incorporating many software development practices in the mix too." +
             " Unfortunately, Ping is not deployed to the public due to costs and maintenance issues",
         role: "Full Stack developer, UI/UX Designer",
         technologies: ["React Native", "CSS", "Firebase"],
@@ -22,9 +48,10 @@ export const projectsInfo = [
         photo: pingImage
     },
     {
-        title: "Grocery Scrapper",
+        title: "Grocery Scraper",
         info: "Web scraping tool to search for the lowest prices from local delivery stores. This app proved challenging to develop " +
-            "as some sites were server side rendered while others were client side rendered." +
+            "as some sites were server side rendered while others were client side rendered. I was also limited by free-tier function timeouts and had" +
+            " to be as efficient as possible (code wise)." +
             "\n\nPuppeteer and axios were used to pull site data, cheerio was used to find the information. Built with nextjs and hosted on vercel.",
         role: "Full Stack developer",
         technologies: ["React", "NodeJS", "AWS Lambda", "Google Cloud", "CSS module", "NextJS", "Puppeteer", "Cheerio"],
@@ -48,7 +75,7 @@ export const projectsInfo = [
             "This in essence summarises what PHS does as a health service – firstly, promoting positive health behaviour through a population-based approach using primary and secondary prevention strategies; and secondly, spreading awareness of the need and the means to look after one’s own health through its health education programmes.\n" +
             "\n" +
             "My role was to develop the frontend and backend of the PHS application that will be used in future PHS screenings." +
-            "\n\n The resultant screening was a huge success, the app successfully served thousands of patients and streamlined the screening " +
+            "\n\nThe resultant screening was a huge success, the app successfully served thousands of patients and streamlined the screening " +
             "process which previously used pen and paper.",
         role: "Full Stack developer, UI/UX Designer",
         technologies: ["React", "CSS", "MongoDB"],
@@ -60,7 +87,10 @@ export const projectsInfo = [
         info: "Web Application for social networking. This project was done at a start-up, who's goal was to connect like minded" +
             " individuals, and provide mentoring, workshops and other social networking events." +
             "\n\nI acted as the technical lead during my time there, directing the movement of the project while implementing features." +
-            "\n\nSome of the more prominent features include an OTP authentication system and searching system",
+            "\n\nSome of the more prominent features include:" +
+            "\n\n1. OTP authentication system" +
+            "\n2. Searching system" +
+            "\n3. Chat system",
         role: "Tech Lead, Software Developer",
         technologies: ["React", "Python", "CSS", "MongoDB", "Firebase"],
         url: "https://app.sagexperiences.com/login",
@@ -78,7 +108,8 @@ export const projectsInfo = [
     },
     {
         title: "Neo",
-        info: "Command Line Task Manager, to store, display and view tasks",
+        info: "Command Line Task Manager, to store, display and view tasks. This was a personal project to explore Java and JavaFX and explore principles " +
+            "of software development",
         role: "Software Developer",
         technologies: ["Java", "JavaFX"],
         url: "https://github.com/ryantianj/ip",
@@ -86,7 +117,8 @@ export const projectsInfo = [
     },
     {
         title: "WhereTourGo",
-        info: "Command Line Contact Book, to store, display and view contacts. Complete with features such as summary graphs, tagging etc.",
+        info: "Command Line Contact Book, to store, display and view contacts. Complete with features such as summary graphs, tagging etc. This was a group project to explore Java and JavaFX and explore principles " +
+            "of software development",
         role: "Team Leader, Software Developer",
         technologies: ["Java", "JavaFX"],
         url: "https://github.com/ryantianj/tp",
