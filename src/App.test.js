@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Hello from "./sections/Hello/Hello";
 
 test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  render(<Hello />);
+  const linkElement = screen.getByText('Ryan Tian', {exact: false});
   expect(linkElement).toBeInTheDocument();
 });
