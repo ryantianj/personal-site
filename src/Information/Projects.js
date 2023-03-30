@@ -6,8 +6,9 @@ import SudokuImage from "./images/Sudoku.png"
 import NEOImage from "./images/Neo.png"
 import WTGImage from "./images/TP.png"
 import groceryImage from "./images/grocery-scraper.png"
-import placeholder from "./images/placeholder.png"
+import chessImage from "./images/chess.png"
 import lexisJobs from "./images/LexisJobs.png"
+import placeholder from "./images/placeholder.png"
 import {LOCAL} from "../Globals";
 export const projectsInfo = [
     {
@@ -46,6 +47,19 @@ export const projectsInfo = [
         technologies: ["React Native", "CSS", "Firebase"],
         url: "https://github.com/ryantianj/ping",
         photo: pingImage
+    },
+    {
+        title: "Chess",
+        info: "Chess game application developed from scratch! Created out of my interest for chess. Computer AI coming in the future" +
+            "\n\nFeatures:" +
+            "\n\n1. All chess moves! Including en passant, castling, promotion etc." +
+            "\n2. Undoing moves" +
+            "\n3. Dragging and dropping pieces" +
+            "\n4. Viewing legal moves",
+        role: "Developer",
+        technologies: ["React", "JavaScript"],
+        url: "https://ryantianj.github.io/chess/",
+        photo: chessImage
     },
     {
         title: "Grocery Scraper",
@@ -102,7 +116,7 @@ export const projectsInfo = [
             " makes use of the Tesseract library, an open source optical character recognition engine sponsored by google." +
             "\n\nOriginally a leetcode problem, I decided to convert my solution to JavaScript. Also for my grandparents who does Sudoku in their free time.",
         role: "Developer",
-        technologies: ["JavaScript", "ReactJS", "Tesseract"],
+        technologies: ["JavaScript", "React", "Tesseract"],
         url: "https://ryantianj.github.io/sudoku/",
         photo: SudokuImage
     },
