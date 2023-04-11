@@ -21,6 +21,7 @@ export const projectsInfo = [
             "\n3. Implemented openAI API's as part of a new feature" +
             "\n4. Basic resume parser" +
             "\n5. Optimization of existing code to reduce costs" +
+            "\n6. Batch job scheduling" +
             "\n\nThis was done as part of my internship at Challenger Technologies software department (ChuGo)"
         ,
         role: "Full Stack developer",
@@ -50,14 +51,16 @@ export const projectsInfo = [
     },
     {
         title: "Chess",
-        info: "Chess game application developed from scratch! Created out of my interest for chess. Computer AI coming in the future" +
+        info: "Chess game application developed from scratch! Created out of my interest for chess." +
             "\n\nFeatures:" +
-            "\n\n1. All chess moves! Including en passant, castling, promotion etc." +
-            "\n2. Undoing moves" +
-            "\n3. Dragging and dropping pieces" +
-            "\n4. Viewing legal moves",
+            "\n\n1. Computer AI, choose your difficulty!" +
+            "\n2. All chess moves! Including en passant, castling, promotion etc." +
+            "\n3. Undoing moves" +
+            "\n4. Dragging and dropping pieces" +
+            "\n5. Viewing legal moves" +
+            "\n\nThe AI uses Minimax with alpha-beta pruning, quiescence search and transposition tables to find the best move",
         role: "Developer",
-        technologies: ["React", "JavaScript"],
+        technologies: ["React", "JavaScript", "Artificial Intelligence"],
         url: "https://ryantianj.github.io/chess/",
         photo: chessImage
     },
