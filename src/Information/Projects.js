@@ -60,7 +60,7 @@ export const projectsInfo = [
             "\n5. Viewing legal moves" +
             "\n\nThe AI uses Minimax with alpha-beta pruning, quiescence search and transposition tables to find the best move",
         role: "Developer",
-        technologies: ["React", "JavaScript", "Artificial Intelligence"],
+        technologies: ["React", "JavaScript", "Artificial Intelligence", "Game"],
         url: "https://ryantianj.github.io/chess/",
         photo: chessImage
     },
@@ -119,7 +119,7 @@ export const projectsInfo = [
             " makes use of the Tesseract library, an open source optical character recognition engine sponsored by google." +
             "\n\nOriginally a leetcode problem, I decided to convert my solution to JavaScript. Also for my grandparents who does Sudoku in their free time.",
         role: "Developer",
-        technologies: ["JavaScript", "React", "Tesseract"],
+        technologies: ["JavaScript", "React", "Tesseract", "Game"],
         url: "https://ryantianj.github.io/sudoku/",
         photo: SudokuImage
     },

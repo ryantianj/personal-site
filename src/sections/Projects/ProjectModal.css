@@ -4,9 +4,27 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     justify-content: center;
+    position: relative;
 }
+
+.projectScroll {
+    position: absolute;
+    right: 10px;
+    bottom: 60px;
+    border: none;
+    background-color: green;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    opacity: 70%;
+}
+
+.projectScroll:hover {
+    cursor: pointer;
+}
+
 
 .projectModalImage {
     background-color: var(--greyAccent);
@@ -29,6 +47,7 @@
     margin-top: 10px;
     font-size: 20px;
     padding: 10px;
+    width: 100%;
 }
 
 .projectModalButton:hover {

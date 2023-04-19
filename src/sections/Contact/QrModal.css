@@ -1,0 +1,21 @@
+.qr {
+    background-color: var(--primaryColour);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.qrCode {
+    height: 400px;
+    width: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+    .qrCode {
+        height: 300px;
+        width: 300px;
+    }
+}
