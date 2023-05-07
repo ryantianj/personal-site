@@ -10,11 +10,16 @@ const Project = ({project}) => {
     const [isShowMore, setIsShowMore] = useState(false)
 
     const handleShowMore = (e) => {
-        if (e.stopPropagation) {
-            e.stopPropagation();
+        try {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            }
+            setIsShowMore(true)
+            document.body.style.overflow = 'hidden';
+        } catch (e) {
+            alert(e)
         }
-        setIsShowMore(true)
-        document.body.style.overflow = 'hidden';
+
     }
     
     return (
