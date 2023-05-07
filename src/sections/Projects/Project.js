@@ -10,6 +10,9 @@ const Project = ({project}) => {
     const [isShowMore, setIsShowMore] = useState(false)
 
     const handleShowMore = (e) => {
+        if (e.stopPropagation) {
+            e.stopPropagation();
+        }
         setIsShowMore(true)
         document.body.style.overflow = 'hidden';
     }
@@ -25,7 +28,7 @@ const Project = ({project}) => {
                     <p style={{textOverflow: "ellipsis", whiteSpace:"nowrap", overflow:"hidden"}}>{project.info}</p>
                     <p style={{fontWeight: "bold"}}>{project.role}</p>
                     <Skills skills={project.technologies} />
-                    <Button onClick={(e) => handleShowMore(e, project)}>
+                    <Button onClick={handleShowMore}>
                         Show more
                     </Button>
                 </div>
