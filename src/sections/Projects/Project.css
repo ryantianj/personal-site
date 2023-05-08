@@ -17,20 +17,23 @@
     align-content: center;
     justify-content: flex-start;
     border-radius: 20px;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+    overflow: hidden;
 }
 
-.projectItem:hover .projectItemInner {
-    transform: rotateY(180deg);
+.projectItemInner:hover .projectItemInfo {
+    top: 0;
+}
+
+.projectItemInner:hover .projectItemSummary {
+    top: -100%;
 }
 
 .projectItemSummary {
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    transition: top 400ms;
 }
 
 .projectItemImage {
@@ -49,6 +52,7 @@
 }
 
 .projectItemInfo {
+    top: 100%;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -60,11 +64,8 @@
     -webkit-box-sizing:border-box;
     -ms-box-sizing:border-box;
     overflow-y: scroll;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
+    transition: top 400ms;
 }
-
 
 @media only screen and (max-width: 768px) {
     .projectItem {

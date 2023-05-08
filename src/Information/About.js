@@ -1,7 +1,7 @@
 import {DiPython, DiJava, DiJavascript1, DiGo, DiReact, DiCss3, DiMongodb,
     DiPostgresql, DiNodejsSmall, DiGoogleCloudPlatform} from 'react-icons/di'
 import {IoLogoFirebase} from "react-icons/io5";
-import {TbBrandNextjs} from "react-icons/tb";
+import {TbBrandNextjs, TbBrandDocker} from "react-icons/tb";
 
 export const skillsInfo = []
 
@@ -25,6 +25,7 @@ export const softwareInfo = [
     {text: "PostgreSQL", icon: <DiPostgresql />},
     {text: "NodeJS", icon: <DiNodejsSmall />},
     {text: "NextJS", icon: <TbBrandNextjs />},
+    {text: "Docker", icon: <TbBrandDocker />},
 ]
 
 export const educationInfo = [

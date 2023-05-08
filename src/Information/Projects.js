@@ -58,9 +58,16 @@ export const projectsInfo = [
             "\n3. Undoing moves" +
             "\n4. Dragging and dropping pieces" +
             "\n5. Viewing legal moves" +
-            "\n\nThe AI uses Minimax with alpha-beta pruning, quiescence search and transposition tables to find the best move",
+            "\n\nThe AI uses Minimax algorithm to find the best move, optimized with:" +
+            "\n\n1. Alpha-beta pruning" +
+            "\n2. Quiescence search" +
+            "\n3. Killer heuristic" +
+            "\n4. Principal variation" +
+            "\n5. Transposition tables" +
+            "\n6. Move ordering" +
+            "\n\nThis application makes use of web workers in the background to generate the best move",
         role: "Developer",
-        technologies: ["React", "JavaScript", "Artificial Intelligence", "Game"],
+        technologies: ["React", "JavaScript", "Artificial Intelligence", "Web Worker", "Game"],
         url: "https://ryantianj.github.io/chess/",
         photo: chessImage
     },
@@ -93,7 +100,8 @@ export const projectsInfo = [
             "\n" +
             "My role was to develop the frontend and backend of the PHS application that will be used in future PHS screenings." +
             "\n\nThe resultant screening was a huge success, the app successfully served thousands of patients and streamlined the screening " +
-            "process which previously used pen and paper.",
+            "process which previously used pen and paper." +
+            "\n\nI also acted as a guide / mentor for the PHS 2023.",
         role: "Full Stack developer, UI/UX Designer",
         technologies: ["React", "CSS", "MongoDB"],
         url: "https://medicine.nus.edu.sg/giving/what-to-support/service/public-health-service/",
