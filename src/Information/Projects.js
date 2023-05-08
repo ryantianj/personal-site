@@ -25,7 +25,7 @@ export const projectsInfo = [
             "\n\nThis was done as part of my internship at Challenger Technologies software department (ChuGo)"
         ,
         role: "Full Stack developer",
-        technologies: ["React", "CSS", "AWS", "NodeJs", "Express", "PostgreSQL"],
+        technologies: ["React", "CSS", "AWS", "NodeJs", "Express", "PostgreSQL", "Docker", "Linux Server"],
         url: "https://www.lexisjobs.asia/",
         photo: lexisJobs
     },
