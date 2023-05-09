@@ -1,13 +1,14 @@
 .search {
     border-radius: 10px;
     padding: 5px;
-    max-width: 150px;
+    max-width: 200px;
+    width: 100%;
 }
 
 .searchIcon {
     position: absolute;
     font-size: 20px;
-    right: -5px;
+    right: 5px;
 }
 
 .searchIcon:hover {
@@ -20,5 +21,5 @@
     flex-direction: row;
     align-items: center;
     gap: 5px;
-    width: 300px;
+    width: 200px;
 }
