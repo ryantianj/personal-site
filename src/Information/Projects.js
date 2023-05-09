@@ -22,6 +22,7 @@ export const projectsInfo = [
             "\n4. Basic resume parser" +
             "\n5. Optimization of existing code to reduce costs" +
             "\n6. Batch job scheduling" +
+            "\n7. Mailing system" +
             "\n\nThis was done as part of my internship at Challenger Technologies software department (ChuGo)"
         ,
         role: "Full Stack developer",
@@ -65,6 +66,7 @@ export const projectsInfo = [
             "\n4. Principal variation" +
             "\n5. Transposition tables" +
             "\n6. Move ordering" +
+            "\n7. Null move heuristic" +
             "\n\nThis application makes use of web workers in the background to generate the best move",
         role: "Developer",
         technologies: ["React", "JavaScript", "Artificial Intelligence", "Web Worker", "Game"],
