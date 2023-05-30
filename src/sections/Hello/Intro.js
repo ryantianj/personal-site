@@ -7,7 +7,7 @@ const Intro = ({greeting, name, title}) => {
         <div className="introWrapper">
             <div>
                 <div className="nameWrapper">
-                    <h1 className="greetingWrapper" style={{color: "white"}}>{greeting}<br/><span className="boldName">{name}</span></h1>
+                    <h1 className="greetingWrapper">{greeting}<br/><span className="boldName">{name}</span></h1>
                 </div>
                 <p className="title">
                     {title}

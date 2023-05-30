@@ -8,6 +8,7 @@ import WTGImage from "./images/TP.png"
 import groceryImage from "./images/grocery-scraper.png"
 import chessImage from "./images/chess.png"
 import lexisJobs from "./images/LexisJobs.png"
+import threeImage from "./images/Three.png"
 import placeholder from "./images/placeholder.png"
 import {LOCAL} from "../Globals";
 export const projectsInfo = [
@@ -23,6 +24,7 @@ export const projectsInfo = [
             "\n5. Optimization of existing code to reduce costs" +
             "\n6. Batch job scheduling" +
             "\n7. Mailing system" +
+            "\n8. Machine learning" +
             "\n\nThis was done as part of my internship at Challenger Technologies software department (ChuGo)"
         ,
         role: "Full Stack developer",
@@ -72,6 +74,16 @@ export const projectsInfo = [
         technologies: ["React", "JavaScript", "Artificial Intelligence", "Web Worker", "Game"],
         url: "https://ryantianj.github.io/chess/",
         photo: chessImage
+    },
+    {
+        title: "THREE.",
+        info: "Website for THREE. by Garamika, a cafe serving Indonesian food. Do check them out if you enjoy oxtail!" +
+            "\n\nThis cafe is my friend's family start-up, and to reduce their operating costs, I offered to create this website for free" +
+            "and utilise free hosting to reduce their website cost to 0.",
+        role: "Developer, Website administrator",
+        technologies: ["React", "NextJS", "SCSS"],
+        url: "https://threebygaramika.vercel.app/",
+        photo: threeImage
     },
     {
         title: "Grocery Scraper",
@@ -124,7 +136,7 @@ export const projectsInfo = [
         photo: SAGEImage
     },
     {
-        title: "Sudoku Solver",
+        title: "Sudoku",
         info: "Solves Sudoku by treating the problem as a CSP (constraint satisfaction problem) and backtracking to get the final result. The image recognition" +
             " makes use of the Tesseract library, an open source optical character recognition engine sponsored by google." +
             "\n\nOriginally a leetcode problem, I decided to convert my solution to JavaScript. Also for my grandparents who does Sudoku in their free time.",
