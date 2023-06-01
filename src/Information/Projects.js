@@ -79,7 +79,7 @@ export const projectsInfo = [
         title: "THREE.",
         info: "Website for THREE. by Garamika, a cafe serving Indonesian food. Do check them out if you enjoy oxtail!" +
             "\n\nThis cafe is my friend's family start-up, and to reduce their operating costs, I offered to create this website for free" +
-            "and utilise free hosting to reduce their website cost to 0.",
+            " and utilise free hosting to reduce their website cost to 0.",
         role: "Developer, Website administrator",
         technologies: ["React", "NextJS", "SCSS"],
         url: "https://threebygaramika.vercel.app/",

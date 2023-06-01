@@ -30,8 +30,8 @@ const Theme = () => {
 
     return (
         <div className="themeWrapper">
-            {isLight && <MdOutlineLightMode className="themeIcons" onClick={handleClick}/>}
-            {!isLight && <MdDarkMode className="themeIcons" style={{color: "white"}} onClick={handleClick}/>}
+            {isLight && <button className="themeButton"><MdOutlineLightMode className="themeIcons" onClick={handleClick}/></button>}
+            {!isLight && <button className="themeButton"><MdDarkMode className="themeIcons" style={{color: "white"}} onClick={handleClick}/></button>}
         </div>
     )
 }
