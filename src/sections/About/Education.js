@@ -14,7 +14,7 @@ const Education = () => {
             <EducationList education={educationInfo}/>
             <Divisor />
             <h2 className="educationHeader">
-                Interests
+                Hobbies
             </h2>
             <Skills skills={interestInfo} />
         </div>

@@ -20,6 +20,14 @@ export const certsInfo = [
         photo: udemyImage
     },
     {
+        url: "https://udemy.com/certificate/UC-9ed98f2c-cd0d-4c09-9415-3e8f0566f437/",
+        number: "UC-9ed98f2c-cd0d-4c09-9415-3e8f0566f437",
+        from: "Udemy",
+        name: "REST APIs with Flask and Python in 2023",
+        date: "Jun 2023",
+        photo: udemyImage
+    },
+    {
         url: "https://www.udemy.com/certificate/UC-79665f64-79ee-42c4-b0fd-3a67ce45beb7/",
         number: "UC-79665f64-79ee-42c4-b0fd-3a67ce45beb7",
         from: "Udemy",

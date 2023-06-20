@@ -1,36 +1,66 @@
 .softwareWrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
 .softwareList {
     padding-top: 20px;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
+    overflow-y: scroll;
+    height: 220px;
 }
 
 .softwareHeader {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.softWareItem{
+.softWareItem {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100px;
+}
+
+.softwareScroll {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.softwareScrollButton {
+    border: none;
+    background-color: green;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    opacity: 70%;
+}
+
+.softwareScrollButton:hover {
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
     .softwareList {
         padding-bottom: 20px;
+    }
+    .softwareHeader {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2px;
     }
 }

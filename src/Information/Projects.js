@@ -13,26 +13,6 @@ import placeholder from "./images/placeholder.png"
 import {LOCAL} from "../Globals";
 export const projectsInfo = [
     {
-        title: "LexisJobs",
-        info:
-            "LexisJobs is a job searching / matching software web application. The software aims to connect employers with employees and find suitable matches for each job. " +
-            "\n\nAs a full stack developer, there were numerous features I was tasked with. More notably," +
-            "\n\n1. Web scraper / crawler" +
-            "\n2. Implemented a CMS for the job portal " +
-            "\n3. Implemented openAI API's as part of a new feature" +
-            "\n4. Basic resume parser" +
-            "\n5. Optimization of existing code to reduce costs" +
-            "\n6. Batch job scheduling" +
-            "\n7. Mailing system" +
-            "\n8. Machine learning" +
-            "\n\nThis was done as part of my internship at Challenger Technologies software department (ChuGo)"
-        ,
-        role: "Full Stack developer",
-        technologies: ["React", "CSS", "AWS", "NodeJs", "Express", "PostgreSQL", "Docker", "Linux Server"],
-        url: "https://www.lexisjobs.asia/",
-        photo: lexisJobs
-    },
-    {
         title: "P!ng",
         info: "P!ng was the result of a summer project undertaken by my friend Marcus and I.\n" +
             "\n" +
@@ -74,6 +54,36 @@ export const projectsInfo = [
         technologies: ["React", "JavaScript", "Artificial Intelligence", "Web Worker", "Game"],
         url: "https://ryantianj.github.io/chess/",
         photo: chessImage
+    },
+    {
+        title: "ML Trainer",
+        info: "This is a backend application aiming to help users train and test machine learning models." +
+            "\n\nIt is specifically designed for text classification problems, and currently is targeted at named entity recognition." +
+            "\n\nDevelopers can easily change the code to suit other use cases or for their own usage.",
+        role: "Developer",
+        technologies: ["Python", "Flask", "Spacy", "Machine Learning"],
+        url: "https://github.com/ryantianj/NER-backend",
+        photo: placeholder
+    },
+    {
+        title: "LexisJobs",
+        info:
+            "LexisJobs is a job searching / matching software web application. The software aims to connect employers with employees and find suitable matches for each job. " +
+            "\n\nAs a full stack developer, there were numerous features I was tasked with. More notably," +
+            "\n\n1. Web scraper / crawler" +
+            "\n2. Implemented a CMS for the job portal " +
+            "\n3. Implemented openAI API's as part of a new feature" +
+            "\n4. Basic resume parser" +
+            "\n5. Optimization of existing code to reduce costs" +
+            "\n6. Batch job scheduling" +
+            "\n7. Mailing system" +
+            "\n8. Machine learning" +
+            "\n\nThis was done as part of my internship at Challenger Technologies software department (ChuGo)"
+        ,
+        role: "Full Stack developer",
+        technologies: ["React", "CSS", "AWS", "NodeJs", "Express", "PostgreSQL", "Docker", "Linux Server"],
+        url: "https://www.lexisjobs.asia/",
+        photo: lexisJobs
     },
     {
         title: "THREE.",
