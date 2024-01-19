@@ -2,7 +2,25 @@ import udemyImage from "./images/Udemy.png"
 import orbitalImage from "./images/orbital.jfif"
 import mongoDBUniImage from "./images/mongodb university.jfif"
 import AISGImage from "./images/AISG.jpeg"
+import NUSImage from "./images/NUS.png"
+
 export const certsInfo = [
+    {
+        url: "https://credentials.nus.edu.sg/f253d612-64e3-48a0-ac45-5fd90a83c55c",
+        number: "f253d612-64e3-48a0-ac45-5fd90a83c55c",
+        from: "National University of Singapore",
+        name: "Certificate of Merit, Software Engineering",
+        date: "Jan 2024",
+        photo: NUSImage
+    },
+    {
+        url: "https://credentials.nus.edu.sg/40458463-008e-42d1-a11b-5d68ddcedcdf",
+        number: "40458463-008e-42d1-a11b-5d68ddcedcdf",
+        from: "National University of Singapore",
+        name: "Certificate of Merit, Computer Security",
+        date: "Jan 2024",
+        photo: NUSImage
+    },
     {
         url: "https://credentials.nus.edu.sg/ccdf6d1c-267a-4c47-a4a3-56623598d117",
         number: "37398590",
